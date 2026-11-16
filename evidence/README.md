@@ -11,6 +11,6 @@ Save screenshots here as you go. Suggested names:
 | `03_follow_stream.png` | Phase 3: Follow TCP Stream shows unreadable bytes |
 | `04_acl_before.png` | `acl_test.py` on phase 3 (2 FAIL) |
 | `04_acl_after.png` | `acl_test.py` on phase 4 (4/4 PASS) |
-| `04_broker_denied_log.png` | Broker log lines showing denied publish/subscribe |
+| `04_broker_denied_log.png` | Broker log lines showing denied publishes (blocked reads are not logged) |
 
 Do not commit .pcapng captures from phase 2. They contain the lab passwords.
