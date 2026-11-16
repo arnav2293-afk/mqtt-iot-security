@@ -1,0 +1,12 @@
+# One Mosquitto broker. Which security phase runs is set by PHASE in .env
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2.0.18
+    command: mosquitto -c /mosquitto/config/${PHASE:-phase1_open}.conf
+    ports:
+      - "1883:1883"   # plain MQTT (phases 1 and 2)
+      - "8883:8883"   # MQTT over TLS (phases 3 and 4)
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/certs:/mosquitto/certs:ro
+    restart: unless-stopped

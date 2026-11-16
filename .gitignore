@@ -1,0 +1,10 @@
+# secrets and generated material
+.env
+mosquitto/config/passwd
+mosquitto/certs/
+data/
+evidence/*.pcapng
+
+# python
+__pycache__/
+.venv/

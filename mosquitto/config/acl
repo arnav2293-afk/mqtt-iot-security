@@ -1,0 +1,8 @@
+# Least-privilege access rules.
+# The sensor may ONLY write its own reading topic.
+user sensor01
+topic write sensors/lab1/temperature
+
+# The dashboard may ONLY read sensor topics.
+user dashboard
+topic read sensors/#
